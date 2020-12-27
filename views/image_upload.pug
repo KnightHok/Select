@@ -1,0 +1,39 @@
+doctype html
+html
+    head
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(charset="UTF-8")
+        link(rel="stylesheet" href="css/style.css")
+        title Select (IN-PROGRESS)
+    body
+        div(class="grid-container")
+            header(class="header")
+                div(class="store-name")
+                    button(class="sidebar-expand-button") &#9776
+                    a(href="/") Select
+                div(class="header-links")
+                    a(href="/") Login
+                    a(href="/") Sign-Up
+            //- aside(class="aside")
+            //-     h3 Shopping Categories
+                
+            main(class="main")
+                form(action="/upload" method="POST" enctype="multipart/form-data")
+                    //- User enters title, description, and file
+                    label(for="title") Enter Product Name
+                    input(required type="text" name="title")
+
+                    label(for="description") Enter Description Name
+                    input(required type="text" name="description")
+
+                    label(for="description") Enter Price of Product
+                    input(required type="number" name="price" min=0 step="0.01")
+                    
+                    label(for="file") Enter 1 or more Image
+                    input(type="file" accept="image/*" name="file")
+
+                    input(type="submit")
+                    
+
+            footer(class="footer")
+                div All Rights Mine
